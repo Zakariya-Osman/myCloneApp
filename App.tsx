@@ -73,40 +73,19 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-  },
+  container: { flex: 1, backgroundColor: "#fff" },
   profileHeader: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
     padding: 20,
   },
-  profileImage: {
-    width: 80,
-    height: 80,
-    borderRadius: 50,
-  },
-  statsContainer: {
-    alignItems: "center",
-    flex: 1,
-  },
-  stats: {
-    fontWeight: "bold",
-    fontSize: 16,
-  },
-  profileInfo: {
-    paddingHorizontal: 20,
-    paddingBottom: 10,
-  },
-  username: {
-    fontWeight: "bold",
-    fontSize: 18,
-  },
-  bio: {
-    color: "gray",
-  },
+  profileImage: { width: 80, height: 80, borderRadius: 50 },
+  statsContainer: { alignItems: "center", flex: 1 },
+  stats: { fontWeight: "bold", fontSize: 16 },
+  profileInfo: { paddingHorizontal: 20, paddingBottom: 10 },
+  username: { fontWeight: "bold", fontSize: 18 },
+  bio: { color: "gray" },
   followButton: {
     marginTop: 10,
     backgroundColor: "#0095f6",
@@ -114,14 +93,6 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     alignItems: "center",
   },
-  followButtonText: {
-    color: "white",
-    fontWeight: "bold",
-  },
-  postImage: {
-    width: "32%",
-    height: 100,
-    margin: 2,
-    resizeMode: "cover",
-  },
+  followButtonText: { color: "white", fontWeight: "bold" },
+  postImage: { width: "32%", height: 100, margin: 2, resizeMode: "cover" },
 });
