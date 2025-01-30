@@ -50,49 +50,24 @@ export default function App() {
         </View>
       </View>
 
-      {/* Username and Bio */}
-      <View style={styles.profileInfo}>
-        <Text style={styles.username}>{profileData.username}</Text>
-        <Text style={styles.bio}>{profileData.bio}</Text>
-        <TouchableOpacity style={styles.followButton}>
-          <Text style={styles.followButtonText}>Follow</Text>
-        </TouchableOpacity>
+      {/* Bottom Navigation */}
+      <View style={styles.bottomNav}>
+        <Text style={styles.navItem}>Home</Text>
+        <Text style={styles.navItem}>Search</Text>
+        <Text style={styles.navItem}>Profile</Text>
       </View>
-
-      {/* Post Grid */}
-      <FlatList
-        data={profileData.posts}
-        keyExtractor={(item) => item.id}
-        numColumns={3}
-        renderItem={({ item }) => (
-          <Image source={{ uri: item.imageUrl }} style={styles.postImage} />
-        )}
-      />
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#fff" },
-  profileHeader: {
+  bottomNav: {
     flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    padding: 20,
+    justifyContent: "space-around",
+    padding: 15,
+    backgroundColor: "#f8f8f8",
+    borderTopWidth: 1,
+    borderTopColor: "#ddd",
   },
-  profileImage: { width: 80, height: 80, borderRadius: 50 },
-  statsContainer: { alignItems: "center", flex: 1 },
-  stats: { fontWeight: "bold", fontSize: 16 },
-  profileInfo: { paddingHorizontal: 20, paddingBottom: 10 },
-  username: { fontWeight: "bold", fontSize: 18 },
-  bio: { color: "gray" },
-  followButton: {
-    marginTop: 10,
-    backgroundColor: "#0095f6",
-    paddingVertical: 8,
-    borderRadius: 5,
-    alignItems: "center",
-  },
-  followButtonText: { color: "white", fontWeight: "bold" },
-  postImage: { width: "32%", height: 100, margin: 2, resizeMode: "cover" },
+  navItem: { fontSize: 16, fontWeight: "bold" },
 });
